@@ -1,0 +1,209 @@
+body, header, nav, section, aside, footer{
+    display: block;
+}
+
+body{
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'PT Serif', serif;
+}
+
+#wrap{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+h1, h2{
+    font-family: 'Cuprum', sans-serif;
+    text-shadow: 1px 1px 3px #ffffff;
+    font-size: 1.7em;
+}
+
+header img{
+    width: 101%;
+}
+
+#myBtn {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+section{
+    width: 69%;
+    float: left;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 3px solid darkseagreen;
+    border-radius: 5%;
+    margin-left: 1%;
+}
+
+section img{
+    float: left;
+    margin: 10px;
+    margin-left: 0;
+}
+
+section img:hover{
+    transform: rotate(2deg);
+}
+
+aside{
+    width: 23%;
+    float: right;
+    padding-right: 10px;
+    border: 3px solid darkseagreen;
+    border-radius: 10%;
+    padding-left: 10px;
+    margin-right: 1%;
+}
+
+nav{
+    margin-top: 30px;
+   margin-bottom: 30px;
+}
+
+nav li{
+    display: inline;
+    margin-right: 12%;
+    font-size: 1.2em;
+    text-alignment: center;
+}
+
+nav li:first-child{
+    margin-left: 12%;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: all 0.2s ease-in-out; 
+    transform: rotateY(360deg);
+}
+
+footer{
+    clear: both;
+    margin-left: 2%;
+    padding: 20px 0;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 270px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  font-size: 22px;
+  border: 1px solid #888;
+  width: 85%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes example {
+    0%   {color: darkseagreen;}
+    50%  {color: forestgreen;}
+    100%  {color: limegreen;}
+}
+
+@media screen and (max-width:600px)
+{
+    #wrap{
+        width: 100%;
+    }
+    
+    header img{
+        width: 100%;
+    }
+    
+    nav{
+        padding-left: 30px;
+    }
+    
+    nav ul{
+        padding: 0;
+    }
+    
+    nav li{
+        display: block;
+        padding-bottom: 10px;
+	text-align: center;
+    }
+    
+    nav li:first-child{
+        margin-left: 0;
+    }
+    
+    section{
+        float: none;
+        width: 90%;
+        border: none;
+    }
+    
+    section img{
+        display: none;
+    }
+    
+    aside{
+        float: none;
+        width: 90%;
+        border: none;
+        padding-left: 20px;
+    }
+    
+    footer{
+        padding-left: 10px;
+	text-align: center;
+    } 
+}

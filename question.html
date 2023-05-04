@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website is created to ask Guneet to be my girlfriend">
+    <title>Will you be my girlfriend?</title>
+    <link href="main.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrap">
+    <nav>
+        <ul>
+            <li><a href="index.html">Woof Letter</a></li>
+            <li><a href="question.html">Question</a></li>
+        </ul>
+    </nav>
+
+    <section>
+    <h2>Guneet, will you be my girlfriend?</h2>
+	
+	<p>
+		<input type="radio" id="yes" name="fav_language" value="HTML">
+		<label for="html">YES</label><br>
+		<input type="radio" id="no" name="fav_language" value="CSS">
+		<label for="css">NO</label><br>
+	</p>
+	<p>
+		<button id="myBtn" type="button">SUBMIT</button>
+	</p>
+
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+		<span class="close">&times;</span>
+		<p>Congratulations, you are officially Sagar's girlfriend.</p>
+	  </div>
+
+	</div>
+
+	<div id="myModal2" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+		<span class="close">&times;</span>
+		<p>Seriously?? Please try again!</p>
+	  </div>
+
+	</div>
+	
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+		var modal2 = document.getElementById("myModal2");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		var span2 = document.getElementsByClassName("close")[1];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+			 if(document.getElementById('yes').checked) {
+			  //Male radio button is checked
+			  modal.style.display = "block";
+			}else {
+			  //Female radio button is checked
+			  modal2.style.display = "block";
+			}
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+
+		span2.onclick = function() {
+		  modal2.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		  else if (event.target == modal2) {
+			modal2.style.display = "none";
+		  }
+		}
+	</script>
+
+    <footer>&copy; 2023 <a href="mailto:sagarvyas77777@gmail.com">Sagar Vyas</a></footer>
+    </div>
+</body>
+</html>
